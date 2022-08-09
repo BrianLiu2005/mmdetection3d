@@ -9,6 +9,7 @@ import numpy as np
 import torch
 from mmcv.utils import print_log
 
+from mmdet3d.core.evaluation.kitti_utils.eval import kitti_eval_please
 
 from ..core import show_multi_modality_result, show_result
 from ..core.bbox import (Box3DMode, CameraInstance3DBoxes, Coord3DMode,
@@ -382,7 +383,7 @@ class KittiBrianDataset(Custom3DDataset):
                 ap_result_str, ap_dict = kitti_eval(
                     gt_annos, result_files, self.CLASSES, eval_types=['bbox'])
             else:
-                ap_result_str, ap_dict = kitti_eval(gt_annos, result_files,
+                ap_result_str, ap_dict = kitti_eval_please(gt_annos, result_files,
                                                     self.CLASSES, eval_types=['bev', '3d'])
             print_log('\n' + ap_result_str, logger=logger)
 
