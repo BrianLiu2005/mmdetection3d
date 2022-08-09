@@ -28,6 +28,7 @@ from .semantickitti_dataset import SemanticKITTIDataset
 from .sunrgbd_dataset import SUNRGBDDataset
 from .utils import get_loading_pipeline
 from .waymo_dataset import WaymoDataset
+from .kitti_dataset_Brian import KittiBrianDataset
 
 __all__ = [
     'KittiDataset', 'KittiMonoDataset', 'build_dataloader', 'DATASETS',
@@ -43,5 +44,5 @@ __all__ = [
     'VoxelBasedPointSampler', 'get_loading_pipeline', 'RandomDropPointsColor',
     'RandomJitterPoints', 'ObjectNameFilter', 'AffineResize',
     'RandomShiftScale', 'LoadPointsFromDict', 'PIPELINES',
-    'RangeLimitedRandomCrop', 'RandomRotate', 'MultiViewWrapper'
+    'RangeLimitedRandomCrop', 'RandomRotate', 'MultiViewWrapper', 'KittiBrianDataset',
 ]
